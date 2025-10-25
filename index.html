@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shubha Fertility Center| Digital Card</title>
+  <title>Shubha Fertility Center | Digital Card</title>
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -13,7 +13,9 @@
       align-items: center;
       justify-content: center;
       padding: 20px;
+      overflow-x: hidden;
     }
+
     .card {
       background: #fff;
       width: 360px;
@@ -23,6 +25,7 @@
       overflow: hidden;
       position: relative;
     }
+
     .header {
       width: 100%;
       display: flex;
@@ -30,6 +33,7 @@
       align-items: center;
       position: relative;
     }
+
     .header-bg {
       width: 100%;
       height: 110px;
@@ -41,6 +45,7 @@
       left: 0;
       z-index: 1;
     }
+
     .logo-bg {
       position: absolute;
       top: 38px;
@@ -57,6 +62,7 @@
       align-items: center;
       justify-content: center;
     }
+
     .logo-img {
       width: 135px;
       height: 55px;
@@ -70,6 +76,7 @@
       z-index: 3;
       display: block;
     }
+
     .profile-pic {
       width: 160px;
       height: 160px;
@@ -83,11 +90,13 @@
       z-index: 2;
       position: relative;
     }
+
     .content {
       padding: 6px 25px 25px;
       text-align: center;
       position: relative;
     }
+
     .name {
       font-size: 24px;
       font-weight: 700;
@@ -95,6 +104,7 @@
       margin-bottom: 4px;
       margin-top: -6px;
     }
+
     .designation {
       font-size: 16px;
       color: #423b3f;
@@ -102,23 +112,27 @@
       font-weight: 600;
       margin-top: -2px;
     }
+
     .company {
       font-size: 18px;
       color: #666;
       margin-bottom: 8px;
     }
+
     .tagline {
       font-size: 15px;
       color: #641c7f;
       font-style: italic;
       margin-bottom: 20px;
     }
+
     .contact-info {
       margin-bottom: 18px;
       border-top: 1px solid #eee;
       border-bottom: 1px solid #eee;
       padding: 0;
     }
+
     .contact-item {
       display: block;
       color: #641c7f;
@@ -128,6 +142,7 @@
       transition: all 0.3s ease;
       word-break: break-word;
     }
+
     .contact-item i.fa-phone,
     .contact-item i.fa-envelope {
       color: #c94190 !important;
@@ -135,10 +150,12 @@
       font-size: 1.01em;
       vertical-align: middle;
     }
+
     .contact-item:hover {
       background: #f7effc;
       color: #42105c;
     }
+
     .social-links {
       display: flex;
       justify-content: center;
@@ -146,6 +163,7 @@
       margin: 21px 0 23px 0;
       flex-wrap: wrap;
     }
+
     .social-btn {
       width: 45px;
       height: 45px;
@@ -160,17 +178,21 @@
       transition: all 0.3s ease;
       box-shadow: 0 1px 7px rgba(252, 126, 234, 0.08);
     }
+
     .social-btn:hover {
       background: #c94cb3;
       color: #fff;
       transform: translateY(-2px);
     }
+
     .actions {
       display: flex;
       gap: 13px;
       justify-content: center;
       margin-bottom: 22px;
+      flex-wrap: wrap;
     }
+
     .action-btn {
       flex: 1;
       background: #c94190;
@@ -187,20 +209,24 @@
       justify-content: center;
       gap: 7px;
     }
+
     .action-btn:hover {
       background: #c94190;
       color: #fff;
       transform: translateY(-2px);
     }
+
     .qr-section {
       text-align: center;
       margin-top: 7px;
     }
+
     .qr-section p {
       color: #641c7f;
       font-weight: 600;
       margin-bottom: 8px;
     }
+
     .qr-code {
       width: 120px;
       height: 120px;
@@ -212,69 +238,106 @@
       box-shadow: 0 4px 10px rgba(100, 28, 127, 0.08);
     }
 
+    /* Mobile Responsive Adjustments */
     @media (max-width: 500px) {
-      .card {
-        width: 100vw;
-        max-width: 100vw;
-        border-radius: 0;
-        min-width: 0;
+      body {
+        padding: 0;
+        align-items: flex-start;
       }
+
+      .card {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+        min-height: 100vh;
+      }
+
       .header-bg {
         border-top-left-radius: 0;
         border-top-right-radius: 0;
-        height: 98px;
+        height: 100px;
       }
+
       .content {
-        padding-left: 5vw;
-        padding-right: 5vw;
+        padding: 15px 6vw 25px;
       }
+
       .logo-bg {
-        width: 74vw;
-        height: 38px;
-        top: 30px;
-        left: 50%;
-        transform: translateX(-50%);
+        width: 75vw;
+        height: 40px;
+        top: 28px;
       }
+
       .logo-img {
         width: 57vw;
         height: 36px;
-        margin-top: 20px;
+        margin-top: 24px;
       }
+
       .profile-pic {
         width: 120px;
         height: 120px;
         margin-top: 18px;
         margin-bottom: 12px;
       }
-    }
-    @media (max-width: 420px) {
-      .profile-pic {
-        width: 90px;
-        height: 90px;
-        margin-top: 14px;
-        margin-bottom: 12px;
-      }
-      .logo-bg {
-        width: 60vw;
-        height: 29px;
-        top: 28px;
-      }
-      .logo-img {
-        width: 46vw;
-        height: 25px;
-        margin-top: 28px;
-      }
+
       .name {
-        font-size: 18px;
+        font-size: 20px;
       }
-      .contact-item, .company {
+
+      .designation {
         font-size: 15px;
       }
+
       .tagline {
         font-size: 13px;
       }
+
+      .contact-item, .company {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .profile-pic {
+        width: 100px;
+        height: 100px;
+      }
+
+      .logo-bg {
+        width: 65vw;
+        height: 30px;
+        top: 25px;
+      }
+
+      .logo-img {
+        width: 46vw;
+        height: 28px;
+        margin-top: 17px;
+      }
+
+      .name {
+        font-size: 18px;
+      }
+
+      .contact-item {
+        font-size: 13px;
+      }
+
+      .social-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1em;
+      }
+
+      .qr-code {
+        width: 100px;
+        height: 100px;
+      }
     }
   </style>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
 </head>
 <body>
@@ -285,16 +348,19 @@
       <img src="logo.png" alt="Shubha Fertility Logo" class="logo-img">
       <img src="image.jpeg" alt="G Vinae Kumaar Reddy" class="profile-pic">
     </div>
+
     <div class="content">
       <h1 class="name">G Vinae Kumaar Reddy</h1>
       <h5 class="designation">CEO , Shubha Fertility Center</h5>
       <p class="company">Shubha Fertility Centre</p>
       <p class="tagline">Inspiring Hope, Delivering Miracles!</p>
+
       <div class="contact-info">
         <a href="tel:+919966488588" class="contact-item"><i class="fa-solid fa-phone"></i> +91 9966488588</a>
         <a href="tel:+919032771234" class="contact-item"><i class="fa-solid fa-phone"></i> +91 9032771234</a>
         <a href="mailto:shubhafertilitycenter@gmail.com" class="contact-item"><i class="fa-solid fa-envelope"></i> shubhafertilitycenter@gmail.com</a>
       </div>
+
       <div class="social-links">
         <a href="https://www.instagram.com/shubhafertility?igsh=ZnJ2dDE1ZzQ4b2k5" target="_blank" class="social-btn" title="Instagram"><i class="fab fa-instagram"></i></a>
         <a href="https://www.facebook.com/shubhafertility/" target="_blank" class="social-btn" title="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -302,16 +368,19 @@
         <a href="https://wa.me/919966488588" target="_blank" class="social-btn" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
         <a href="https://share.google/8lxx2P8eyfqzZpnMI" target="_blank" class="social-btn" title="Web"><i class="fa-solid fa-globe"></i></a>
       </div>
+
       <div class="actions">
         <button class="action-btn" onclick="downloadContact()"><i class="fa-regular fa-address-card"></i> Save Contact</button>
         <button class="action-btn" onclick="shareCard()"><i class="fa-solid fa-share-nodes"></i> Share Card</button>
       </div>
+
       <div class="qr-section">
         <p>Scan QR Code</p>
         <img src="https://api.qrserver.com/v1/create-qr-code/?size=110x110&data=https://share.google/8lxx2P8eyfqzZpnMI" alt="QR Code" class="qr-code">
       </div>
     </div>
   </div>
+
   <script>
     function downloadContact() {
       const vcard = `BEGIN:VCARD
@@ -334,6 +403,7 @@ END:VCARD`;
       document.body.removeChild(a);
       URL.revokeObjectURL(url);
     }
+
     function shareCard() {
       if (navigator.share) {
         navigator.share({
@@ -353,4 +423,3 @@ END:VCARD`;
   </script>
 </body>
 </html>
-
