@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shubha Fertility Center| Digital Card</title>
+  <title>G Vinae Kumaar Reddy | Digital Card</title>
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -343,6 +343,8 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
   />
+  <!-- Include html-to-image to generate card image -->
+  <script src="https://unpkg.com/html-to-image"></script>
 </head>
 <body>
   <div class="card">
@@ -453,7 +455,17 @@ END:VCARD`;
     }
 
     async function shareCard() {
-      const vcardContent = `BEGIN:VCARD
+      const cardElement = document.querySelector('.card');
+      if (!cardElement) {
+        alert('Card element not found!');
+        return;
+      }
+
+      try {
+        // Generate PNG image blob of the card
+        const blob = await window.htmlToImage.toBlob(cardElement);
+
+        const vcardContent = `BEGIN:VCARD
 VERSION:3.0
 FN:G Vinae Kumaar Reddy
 ORG:Shubha Fertility Centre
@@ -464,36 +476,32 @@ EMAIL:shubhafertilitycenter@gmail.com
 URL:https://share.google/8lxx2P8eyfqzZpnMI
 END:VCARD`;
 
-      try {
-        const blob = new Blob([vcardContent], { type: 'text/vcard' });
-        const filesArray = [
-          new File([blob], 'G_Vinae_Kumaar_Reddy.vcf', { type: 'text/vcard' }),
-        ];
+        const vcardBlob = new Blob([vcardContent], { type: 'text/vcard' });
+        const vcardFile = new File([vcardBlob], 'G_Vinae_Kumaar_Reddy.vcf', {
+          type: 'text/vcard',
+        });
 
-        if (navigator.canShare && navigator.canShare({ files: filesArray })) {
+        const imageFile = new File([blob], 'digital_card.png', { type: 'image/png' });
+
+        if (navigator.canShare && navigator.canShare({ files: [imageFile, vcardFile] })) {
           await navigator.share({
             title: 'G Vinae Kumaar Reddy - Shubha Fertility Centre',
             text: 'Digital Business Card - Inspiring Hope, Delivering Miracles!',
-            url: window.location.href,
-            files: filesArray,
+            files: [imageFile, vcardFile],
+          });
+        } else if (navigator.canShare && navigator.canShare({ files: [imageFile] })) {
+          await navigator.share({
+            title: 'G Vinae Kumaar Reddy - Shubha Fertility Centre',
+            text: 'Digital Business Card - Inspiring Hope, Delivering Miracles!',
+            files: [imageFile],
           });
         } else {
-          // fallback: share URL only
-          await navigator.share({
-            title: 'G Vinae Kumaar Reddy - Shubha Fertility Centre',
-            text: 'Digital Business Card - Inspiring Hope, Delivering Miracles!',
-            url: window.location.href,
-          });
+          alert('Sharing not supported on this device/browser. URL has been copied to clipboard.');
+          await navigator.clipboard.writeText(window.location.href);
         }
-      } catch (err) {
-        // fallback: copy URL to clipboard
-        const url = window.location.href;
-        try {
-          await navigator.clipboard.writeText(url);
-          alert('Card URL copied to clipboard!');
-        } catch {
-          alert('Share this URL: ' + url);
-        }
+      } catch (error) {
+        console.error('Error sharing card:', error);
+        alert('Error sharing card. Please try again.');
       }
     }
   </script>
