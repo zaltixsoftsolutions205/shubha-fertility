@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shubha Fertilty Center | Digital Card</title>
+  <title>Shubha Fertility Center | Digital Card</title>
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -29,22 +29,28 @@
       flex-direction: column;
       align-items: center;
       position: relative;
-      z-index: 1;
-      background: linear-gradient(110deg, #f7e2ef 55%, #e2b4cd 100%);
-      /* #f7e2ef is a light tint of #c94190, #e2b4cd is a light lavender for fade */
+    }
+    .header-bg {
+      width: 100%;
+      height: 110px;
+      background: linear-gradient(110deg, #641c7f 60%, #fc7eea 100%);
       border-top-left-radius: 25px;
       border-top-right-radius: 25px;
-      padding-top: 18px;
-      padding-bottom: 22px;
+      position: absolute;
+      top: 0px; /* Moved up but still some white on top */
+      left: 0;
+      z-index: 1;
     }
     .logo-img {
       width: 90px;
       height: 90px;
       border-radius: 16px;
       background: #fff;
+      margin-top: 10px;
       object-fit: contain;
       border: 3px solid #fff;
       box-shadow: 0 4px 24px rgba(100, 28, 127, 0.10);
+      position: relative;
       z-index: 2;
     }
     .profile-pic {
@@ -54,8 +60,8 @@
       border: 7px solid #fff;
       object-fit: cover;
       background: #fff;
-      box-shadow: 0 8px 32px rgba(201, 65, 144, 0.12);
-      margin-top: 18px;
+      box-shadow: 0 8px 32px rgba(252, 126, 234, 0.13);
+      margin-top: 25px;
       margin-bottom: 12px;
       z-index: 2;
       position: relative;
@@ -95,18 +101,16 @@
       padding: 10px 0;
       font-weight: 500;
       transition: all 0.3s ease;
-      word-break: break-all;
     }
-    .contact-item i.fa-phone,
-    .contact-item i.fa-envelope {
-      color: #c94190 !important;
+    .contact-item i.fa-phone {
+      color: #fc7eea !important;
       margin-right: 5px;
       font-size: 1.01em;
       vertical-align: middle;
     }
     .contact-item:hover {
-      background: #f7e2ef;
-      color: #c94190;
+      background: #f7effc;
+      color: #42105c;
     }
     .social-links {
       display: flex;
@@ -119,7 +123,7 @@
       width: 45px;
       height: 45px;
       border-radius: 50%;
-      background: #c94190;
+      background: #fc7eea;
       color: #fff;
       display: flex;
       align-items: center;
@@ -127,10 +131,10 @@
       text-decoration: none;
       font-size: 1.21em;
       transition: all 0.3s ease;
-      box-shadow: 0 1px 7px rgba(201, 65, 144, 0.08);
+      box-shadow: 0 1px 7px rgba(252, 126, 234, 0.08);
     }
     .social-btn:hover {
-      background: #a8266b;
+      background: #c94cb3;
       color: #fff;
       transform: translateY(-2px);
     }
@@ -142,7 +146,7 @@
     }
     .action-btn {
       flex: 1;
-      background: #c94190;
+      background: #fc7eea;
       color: #fff;
       border: none;
       padding: 12px 0;
@@ -157,7 +161,7 @@
       gap: 7px;
     }
     .action-btn:hover {
-      background: #a8266b;
+      background: #c94cb3;
       color: #fff;
       transform: translateY(-2px);
     }
@@ -187,7 +191,7 @@
         border-radius: 0;
         min-width: 0;
       }
-      .header {
+      .header-bg {
         border-top-left-radius: 0;
         border-top-right-radius: 0;
       }
@@ -204,7 +208,7 @@
       .logo-img {
         width: 60px;
         height: 60px;
-        margin-top: 0px;
+        margin-top: 22px;
       }
       .name {
         font-size: 18px;
@@ -215,10 +219,6 @@
       .tagline {
         font-size: 13px;
       }
-      .header {
-        padding-top: 10px;
-        padding-bottom: 14px;
-      }
     }
   </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
@@ -226,9 +226,10 @@
 <body>
   <div class="card">
     <div class="header">
+      <div class="header-bg"></div>
       <img src="logo.png" alt="Shubha Fertility Logo" class="logo-img">
+      <img src="image.jpg" alt="G Vinae Kumaar Reddy" class="profile-pic">
     </div>
-    <img src="image.jpg" alt="G Vinae Kumaar Reddy" class="profile-pic">
     <div class="content">
       <h1 class="name">G Vinae Kumaar Reddy</h1>
       <p class="company">Shubha Fertility Centre</p>
@@ -236,7 +237,6 @@
       <div class="contact-info">
         <a href="tel:+919966488588" class="contact-item"><i class="fa-solid fa-phone"></i> +91 9966488588</a>
         <a href="tel:+919032771234" class="contact-item"><i class="fa-solid fa-phone"></i> +91 9032771234</a>
-        <a href="mailto:contact@shubhafertility.com" class="contact-item" style="padding-bottom:12px;"><i class="fa-solid fa-envelope"></i> contact@shubhafertility.com</a>
       </div>
       <div class="social-links">
         <a href="https://www.instagram.com/shubhafertility?igsh=ZnJ2dDE1ZzQ4b2k5" target="_blank" class="social-btn" title="Instagram"><i class="fab fa-instagram"></i></a>
@@ -263,7 +263,6 @@ FN:G Vinae Kumaar Reddy
 ORG:Shubha Fertility Centre
 TEL;TYPE=CELL:+919966488588
 TEL;TYPE=CELL:+919032771234
-EMAIL:contact@shubhafertility.com
 URL:https://share.google/8lxx2P8eyfqzZpnMI
 END:VCARD`;
       const blob = new Blob([vcard], { type: 'text/vcard' });
@@ -295,4 +294,3 @@ END:VCARD`;
   </script>
 </body>
 </html>
-
