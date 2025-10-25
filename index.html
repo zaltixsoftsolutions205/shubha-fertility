@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shubha Fertility Center | Digital Card</title>
+  <title>G Vinae Kumaar Reddy | Digital Card</title>
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -43,19 +43,22 @@
     }
     .logo-bg {
       position: absolute;
-      top: 38px; /* Adjust as needed */
+      top: 38px;
       left: 50%;
       transform: translateX(-50%);
-      width: 230px;  /* Adjust width as needed */
-      height: 60px;  /* Adjust height as needed */
+      width: 230px;
+      height: 60px;
       background: #fff;
       border-radius: 15px;
       box-shadow: 0 2px 18px rgba(100, 28, 127, 0.08);
       z-index: 2;
-      margin-top: -8px;
+      margin-top: -9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .logo-img {
-      width: 135px;   /* Wider, more rectangular */
+      width: 135px;
       height: 55px;
       border-radius: 12px;
       background: transparent;
@@ -65,6 +68,7 @@
       box-shadow: none;
       position: relative;
       z-index: 3;
+      display: block;
     }
     .profile-pic {
       width: 160px;
@@ -122,6 +126,7 @@
       padding: 10px 0;
       font-weight: 500;
       transition: all 0.3s ease;
+      word-break: break-word;
     }
     .contact-item i.fa-phone,
     .contact-item i.fa-envelope {
@@ -206,6 +211,7 @@
       display: block;
       box-shadow: 0 4px 10px rgba(100, 28, 127, 0.08);
     }
+
     @media (max-width: 500px) {
       .card {
         width: 100vw;
@@ -216,35 +222,47 @@
       .header-bg {
         border-top-left-radius: 0;
         border-top-right-radius: 0;
+        height: 98px;
       }
       .content {
         padding-left: 5vw;
         padding-right: 5vw;
       }
       .logo-bg {
-        width: 85vw;
-        height: 44px;
+        width: 74vw;
+        height: 38px;
+        top: 30px;
+        left: 50%;
+        transform: translateX(-50%);
       }
       .logo-img {
-        width: 60vw;
-        height: 44px;
-        margin-top: 44px;
+        width: 57vw;
+        height: 36px;
+        margin-top: 20px;
+      }
+      .profile-pic {
+        width: 120px;
+        height: 120px;
+        margin-top: 18px;
+        margin-bottom: 12px;
       }
     }
     @media (max-width: 420px) {
       .profile-pic {
-        width: 105px;
-        height: 105px;
+        width: 90px;
+        height: 90px;
+        margin-top: 14px;
+        margin-bottom: 12px;
       }
       .logo-bg {
-        width: 74vw;
-        height: 34px;
-        top: 32px;
+        width: 60vw;
+        height: 29px;
+        top: 28px;
       }
       .logo-img {
-        width: 54vw;
-        height: 34px;
-        margin-top: 40px;
+        width: 46vw;
+        height: 25px;
+        margin-top: 28px;
       }
       .name {
         font-size: 18px;
@@ -275,7 +293,7 @@
       <div class="contact-info">
         <a href="tel:+919966488588" class="contact-item"><i class="fa-solid fa-phone"></i> +91 9966488588</a>
         <a href="tel:+919032771234" class="contact-item"><i class="fa-solid fa-phone"></i> +91 9032771234</a>
-        <a href="mailto:info@shubhafertility.in" class="contact-item"><i class="fa-solid fa-envelope"></i> info@shubhafertility.in</a>
+        <a href="mailto:shubhafertilitycenter@gmail.com" class="contact-item"><i class="fa-solid fa-envelope"></i> shubhafertilitycenter@gmail.com</a>
       </div>
       <div class="social-links">
         <a href="https://www.instagram.com/shubhafertility?igsh=ZnJ2dDE1ZzQ4b2k5" target="_blank" class="social-btn" title="Instagram"><i class="fab fa-instagram"></i></a>
@@ -303,7 +321,7 @@ ORG:Shubha Fertility Centre
 TITLE:CEO
 TEL;TYPE=CELL:+919966488588
 TEL;TYPE=CELL:+919032771234
-EMAIL:info@shubhafertility.in
+EMAIL:shubhafertilitycenter@gmail.com
 URL:https://share.google/8lxx2P8eyfqzZpnMI
 END:VCARD`;
       const blob = new Blob([vcard], { type: 'text/vcard' });
@@ -335,4 +353,3 @@ END:VCARD`;
   </script>
 </body>
 </html>
-
